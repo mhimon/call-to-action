@@ -55,6 +55,27 @@ function create_block_call_to_action_block_init() {
     true
   );
 
+	$fontpicker_theme = 'src/css/fonticonpicker.base-theme.react.css';
+	wp_enqueue_style(
+		'fontpicker-default-theme',
+		plugins_url( $fontpicker_theme, __FILE__),
+		array()
+	);
+
+	$fontpicker_material_theme = 'src/css/fonticonpicker.material-theme.react.css';
+	wp_enqueue_style(
+		'fontpicker-matetial-theme',
+		plugins_url( $fontpicker_material_theme, __FILE__),
+		array()
+	);
+
+	$fontawesome_css = 'src/css/font-awesome5.css';
+	wp_enqueue_style(
+		'fontawesome-frontend-css',
+		plugins_url( $fontawesome_css, __FILE__),
+		array()
+	);
+
 	register_block_type( 'create-block/call-to-action', array(
 		'editor_script' => 'create-block-call-to-action-block-editor',
 		'style'         => 'create-block-call-to-action-block',
