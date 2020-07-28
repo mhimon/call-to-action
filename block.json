@@ -3,6 +3,7 @@
 	"title": "Call To Action",
 	"category": "widgets",
 	"description": "Amaze audience with attractive Call to Action",
+	"keywords": ["call to action", "cta", "essential"],
 	"textdomain": "call-to-action",
 	"editorScript": "file:./build/index.js",
 	"editorStyle": "file:./build/index.css",
