@@ -119,6 +119,8 @@ class Inspector extends Component {
 			buttonTextSize,
 			buttonBackgroundColor,
 			buttonTextColor,
+			buttonHoverBackgroundColor,
+			buttonHoverTextColor,
 			buttonPaddingTop,
 			buttonPadddinRight,
 			buttonPaddingBottom,
@@ -758,6 +760,22 @@ class Inspector extends Component {
 						label={__("Button Text Color")}
 						color={buttonTextColor}
 						onChange={(buttonTextColor) => setAttributes({ buttonTextColor })}
+					/>
+
+					<ColorControl
+						label={__("Hover Button Color")}
+						color={buttonHoverBackgroundColor}
+						onChange={(buttonHoverBackgroundColor) =>
+							setAttributes({ buttonHoverBackgroundColor })
+						}
+					/>
+
+					<ColorControl
+						label={__("Hover Text Color")}
+						color={buttonHoverTextColor}
+						onChange={(buttonHoverTextColor) =>
+							setAttributes({ buttonHoverTextColor })
+						}
 					/>
 				</PanelBody>
 

@@ -4563,6 +4563,8 @@ var Inspector = /*#__PURE__*/function (_Component) {
           buttonTextSize = attributes.buttonTextSize,
           buttonBackgroundColor = attributes.buttonBackgroundColor,
           buttonTextColor = attributes.buttonTextColor,
+          buttonHoverBackgroundColor = attributes.buttonHoverBackgroundColor,
+          buttonHoverTextColor = attributes.buttonHoverTextColor,
           buttonPaddingTop = attributes.buttonPaddingTop,
           buttonPadddinRight = attributes.buttonPadddinRight,
           buttonPaddingBottom = attributes.buttonPaddingBottom,
@@ -5297,6 +5299,22 @@ var Inspector = /*#__PURE__*/function (_Component) {
         onChange: function onChange(buttonTextColor) {
           return setAttributes({
             buttonTextColor: buttonTextColor
+          });
+        }
+      }), /*#__PURE__*/React.createElement(_util_color_control__WEBPACK_IMPORTED_MODULE_12__["default"], {
+        label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__["__"])("Hover Button Color"),
+        color: buttonHoverBackgroundColor,
+        onChange: function onChange(buttonHoverBackgroundColor) {
+          return setAttributes({
+            buttonHoverBackgroundColor: buttonHoverBackgroundColor
+          });
+        }
+      }), /*#__PURE__*/React.createElement(_util_color_control__WEBPACK_IMPORTED_MODULE_12__["default"], {
+        label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__["__"])("Hover Text Color"),
+        color: buttonHoverTextColor,
+        onChange: function onChange(buttonHoverTextColor) {
+          return setAttributes({
+            buttonHoverTextColor: buttonHoverTextColor
           });
         }
       })), /*#__PURE__*/React.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__["PanelBody"], {
