@@ -17,6 +17,10 @@
  *
  * @see https://developer.wordpress.org/block-editor/tutorials/block-tutorial/applying-styles-with-stylesheets/
  */
+
+require_once __DIR__ . '/includes/font-loader.php';
+require_once __DIR__ . '/includes/post-meta.php';
+
 function create_block_call_to_action_block_init() {
 	$dir = dirname( __FILE__ );
 
@@ -35,14 +39,6 @@ function create_block_call_to_action_block_init() {
 		$script_asset['version']
 	);
 
-	$editor_css = 'build/index.css';
-	wp_register_style(
-		'create-block-call-to-action-block-editor',
-		plugins_url( $editor_css, __FILE__ ),
-		array(),
-		filemtime( "$dir/$editor_css" )
-	);
-
 	$style_css = 'build/style-index.css';
 	wp_register_style(
 		'create-block-call-to-action-block',
@@ -51,9 +47,16 @@ function create_block_call_to_action_block_init() {
 		filemtime( "$dir/$style_css" )
 	);
 
+  $frontend_js = 'src/frontend.js';
+  wp_enqueue_script(
+    'essential-blocks-cta-frontend',
+    plugins_url($frontend_js, __FILE__),
+    array( "jquery","wp-editor"),
+    true
+  );
+
 	register_block_type( 'create-block/call-to-action', array(
 		'editor_script' => 'create-block-call-to-action-block-editor',
-		'editor_style'  => 'create-block-call-to-action-block-editor',
 		'style'         => 'create-block-call-to-action-block',
 	) );
 }

@@ -1,12 +1,21 @@
-/**
- * The following styles get applied both on the front of your site
- * and in the editor.
- *
- * Replace them with your own styles or remove the file completely.
- */
+.eb-cia-wrapper {
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.eb-cia-upload-button {
+	height: 100px;
+	width: 100%;
+	background: #e3e3e3;
+	color: #666666;
+	display: inline-block;
+}
 
-.wp-block-create-block-call-to-action {
-	background-color: var(--wp-admin-theme-color);
-	color: #fff;
-	padding: 2px;
+.eb-cia-button-wrapper a {
+	line-height: inherit;
+}
+
+// Typography style
+.eb-typography-base div {
+	display: flex;
+	justify-content: space-between;
 }
