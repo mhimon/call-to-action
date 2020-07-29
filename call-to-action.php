@@ -76,9 +76,11 @@ function create_block_call_to_action_block_init() {
 		array()
 	);
 
-	register_block_type( 'block/call-to-action-cta', array(
-		'editor_script' => 'create-block-call-to-action-block-editor',
-		'style'         => 'create-block-call-to-action-block',
-	) );
+	if( ! WP_Block_Type_Registry::get_instance()->is_registered( 'essential-blocks/call-to-action' ) ) {
+    register_block_type( 'block/call-to-action-cta', array(
+      'editor_script' => 'create-block-call-to-action-block-editor',
+      'style'         => 'create-block-call-to-action-block',
+    ) );
+  }
 }
 add_action( 'init', 'create_block_call_to_action_block_init' );
