@@ -1,10 +1,10 @@
 {
-	"name": "block/call-to-action",
+	"name": "block/call-to-action-cta",
 	"title": "Call To Action",
 	"category": "widgets",
 	"description": "Amaze audience with attractive Call to Action",
 	"keywords": ["call to action", "cta", "essential"],
-	"textdomain": "call-to-action",
+	"textdomain": "call-to-action-cta",
 	"editorScript": "file:./build/index.js",
 	"editorStyle": "file:./build/index.css",
 	"style": "file:./build/style-index.css"

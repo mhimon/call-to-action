@@ -27,7 +27,7 @@ function create_block_call_to_action_block_init() {
 	$script_asset_path = "$dir/build/index.asset.php";
 	if ( ! file_exists( $script_asset_path ) ) {
 		throw new Error(
-			'You need to run `npm start` or `npm run build` for the "create-block/call-to-action" block first.'
+			'You need to run `npm start` or `npm run build` for the "create-block/call-to-action-cta" block first.'
 		);
 	}
 	$index_js     = 'build/index.js';
@@ -76,7 +76,7 @@ function create_block_call_to_action_block_init() {
 		array()
 	);
 
-	register_block_type( 'create-block/call-to-action', array(
+	register_block_type( 'block/call-to-action-cta', array(
 		'editor_script' => 'create-block-call-to-action-block-editor',
 		'style'         => 'create-block-call-to-action-block',
 	) );

@@ -7,11 +7,11 @@ import save from "./save";
 import icon from "./icon";
 import attributes from "./attributes";
 
-registerBlockType("block/call-to-action", {
-	title: __("Call To Action", "call-to-action"),
+registerBlockType("block/call-to-action-cta", {
+	title: __("Call To Action", "call-to-action-cta"),
 	description: __(
 		"Amaze audience with attractive Call to Action",
-		"call-to-action"
+		"call-to-action-cta"
 	),
 	icon,
 	attributes,
