@@ -6,9 +6,9 @@
  * Author:          The WordPress Contributors
  * License:         GPL-2.0-or-later
  * License URI:     https://www.gnu.org/licenses/gpl-2.0.html
- * Text Domain:     create-block
+ * Text Domain:     call-to-action-cta
  *
- * @package         create-block
+ * @package         call-to-action-cta
  */
 
 /**
@@ -27,7 +27,7 @@ function create_block_call_to_action_block_init() {
 	$script_asset_path = "$dir/build/index.asset.php";
 	if ( ! file_exists( $script_asset_path ) ) {
 		throw new Error(
-			'You need to run `npm start` or `npm run build` for the "create-block/call-to-action-cta" block first.'
+			'You need to run `npm start` or `npm run build` for the "block/call-to-action-cta" block first.'
 		);
 	}
 	$index_js     = 'build/index.js';
